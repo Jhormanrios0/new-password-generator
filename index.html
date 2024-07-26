@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body class="bg-purple-900 text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-purple-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl text-center mb-4">Generador de Contraseñas</h2>
+        <div class="flex items-center bg-gray-900 p-3 rounded-lg mb-4">
+            <span id="result" class="flex-grow break-words"></span>
+            <button class="ml-2 text-white" id="clipboard">
+                <i class="far fa-clipboard"></i>
+            </button>
+        </div>
+        <div class="mb-4">
+            <label class="block text-sm mb-1">Longitud de la Contraseña</label>
+            <input type="number" id="length"
+                class="w-full p-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none focus:border-purple-500"
+                min="4" max="20" value="20">
+        </div>
+        <div class="mb-4">
+            <label class="block text-sm mb-1">Incluir letras mayúsculas</label>
+            <input type="checkbox" id="uppercase" class="mr-2" checked>
+        </div>
+        <div class="mb-4">
+            <label class="block text-sm mb-1">Incluir letras minúsculas</label>
+            <input type="checkbox" id="lowercase" class="mr-2" checked>
+        </div>
+        <div class="mb-4">
+            <label class="block text-sm mb-1">Incluir números</label>
+            <input type="checkbox" id="numbers" class="mr-2" checked>
+        </div>
+        <div class="mb-4">
+            <label class="block text-sm mb-1">Incluir símbolos</label>
+            <input type="checkbox" id="symbols" class="mr-2" checked>
+        </div>
+        <button class="w-full py-2 bg-purple-700 rounded-lg text-white hover:bg-purple-600 focus:outline-none"
+            id="generate">Generar Contraseña</button>
+    </div>
+
+    <script src="./js/app.js" defer></script>
+</body>
+
+</html>
